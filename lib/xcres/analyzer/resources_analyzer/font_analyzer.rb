@@ -20,11 +20,11 @@ module XCRes
       #         the built sections
       #
       def build_sections_for_fonts
-        file_refs = resources_files.map(&:path).select { |path| path.to_s.match /\.(ttf|otf)$/ }
+        font_file_refs = resources_files.map(&:path).select { |path| path.to_s.match /\.(ttf|otf)$/ }
 
-        log "Found #%s fonts in project.", file_refs.count
-        font_file_paths = filter_exclusions(file_refs)
-        data = build_section_data(font_file_paths, options)
+        log 'Found #%s fonts in project.', font_file_refs.count
+        fonts = font_file_refs.map { |file| basename_without_ext file }
+        data = build_section_data(fonts, options)
 
         new_section('Fonts', data)
       end

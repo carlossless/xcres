@@ -4,15 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'xcres/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "xcres"
+  spec.name          = 'xcres'
   spec.version       = XCRes::VERSION
-  spec.authors       = ["Marius Rackwitz"]
-  spec.homepage      = "https://github.com/mrackwitz/xcres"
-  spec.email         = ["git@mariusrackwitz.de"]
-  spec.license       = "MIT"
+  spec.authors       = ['Marius Rackwitz', 'Karolis Stasaitis']
+  spec.homepage      = 'https://github.com/mrackwitz/xcres'
+  spec.email         = ['git@mariusrackwitz.de', 'karolis@delanoir.com']
+  spec.license       = 'MIT'
 
-  spec.description   = "xcres searches your Xcode project for resources" \
-                       "and generates an index as struct constants."
+  spec.description   = 'xcres searches your Xcode project for resources' \
+                       'and generates an index as struct constants.'
   spec.summary       = %q{
   `xcres` searches your Xcode project for resources and generates an index
   as struct constants. So you will never have to reference a resource, without
