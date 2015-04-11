@@ -3,18 +3,18 @@ require 'xcres/analyzer/resources_analyzer/base_resources_analyzer'
 module XCRes
   module ResourcesAnalyzer
 
-    # A +LooseResourcesAnalyzer+ scans the project for resources, which are
+    # A +FontResourcesAnalyzer+ scans the project for fonts, which are
     # loosely placed in the project or in a group and should be included in the
     # output file.
     #
-    class FontAnalyzer < BaseResourcesAnalyzer
+    class FontResourcesAnalyzer < BaseResourcesAnalyzer
 
       def analyze
         @sections = [build_sections_for_fonts]
         super
       end
 
-      # Build a section for each asset catalog if it contains any resources
+      # Build a section for each font
       #
       # @return [Array<Section>]
       #         the built sections
