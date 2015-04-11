@@ -39,7 +39,7 @@ describe 'XCRes::StringsAnalyzer' do
   end
 
   describe "#build_section" do
-    it 'shouldn\'n return a section if there are no strings files' do
+    it 'shouldn\'t return a section if there are no strings files' do
       @analyzer.stubs(:strings_file_refs).returns([])
       @analyzer.build_section.should.be.eql?(nil)
     end
